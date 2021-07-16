@@ -1,8 +1,8 @@
-#Desc:
+#### Desc:
 The goal of this project is to figure out if there is a correlation between the positive/negative sentiment of scientific papers (related to astronomy) and the number of citiations of a paper. In order to do this, we need to create a database of astronomy related papers in sqlite from the NASA ADS API. After creating this database, we need to preprocess the text of each paper, and extract sentiment analysis (unsupervised) of that paper. Afterwards, we need to compare the sentiment with the number of correlations based on the 
 following measures: Pearson, Kendall, Spearman correlation.
 
-#Database:
+#### Database:
 
 We collected papers from the NASA ADS from years 1980-2021. We are collecting papers from database:astronomy.
 
@@ -31,7 +31,7 @@ The following data fields were established:
 * paper_text TEXT
 * word_vector BLOB
 
-#THINGS THAT NEED TO GET DONE: 
+#### THINGS THAT NEED TO GET DONE: 
 
 * did not get abs value in stats for comp sentiment
 * figure out optimal cluster value for kmeans
@@ -53,7 +53,7 @@ The following data fields were established:
 * using pytorch, has libary called skorch for sklearn ???
 * can use tensorflow, tensor flow is harder to learn but has tensorboard ???
 
-#THINGS THAT HAVE BEEN DONE: 
+#### THINGS THAT HAVE BEEN DONE: 
 
 * extracted 3 mil articles from NASA ADS - messed up
 * performed K-means clustering 
@@ -76,7 +76,7 @@ resolved, you have to use data2d to plot silouhette
 * troubleshooting downloading code
 
 
------- text processing 
+#### text processing 
 
 * once data has been downloaded:
 go through text and process it placed processed text back into sqlite db
