@@ -123,14 +123,17 @@ def scatter_plot(x, y, pdf, title, x_label, y_label):
     pdf.savefig(f)
 
 def print_stats(col, col_num):
+
     print("Comp " + str(col_num) + " Stats:")
     print("min", col.min())
     print("max", col.max())
     print("median", col.median())
     print("mean", col.mean())
+    print()
 
 def main():
     runs = 1
+    n_components = 3
     df = pd.read_csv("./data/data.csv")
 
     for run in range(runs):
@@ -143,7 +146,7 @@ def main():
         #    ngram_range=(1,2))
         vect = TfidfVectorizer(stop_words='english', strip_accents='unicode', tokenizer=tokenizer_1, ngram_range=(1,2))
         X_tr = vect.fit_transform(train['abstract'])
-        X_te = vect.transform(test['abstract'])
+        #X_te = vect.transform(test['abstract'])
 
         svd = TruncatedSVD(n_components=n_components)
         data2D_tr = svd.fit_transform(X_tr)
