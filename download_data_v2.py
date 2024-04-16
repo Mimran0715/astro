@@ -15,7 +15,7 @@ import json
 
 from utils import db_command
 
-API_TOKEN = "4EqqwYzTgJYNypXmhwVZNA4UiDytgRdqbcxURdD9"
+API_TOKEN = "API KEY"
 
 def build_url(start: int, params:dict, fields:list, rows:int, sort:str='bibcode+desc') -> str:
     base_url = "https://api.adsabs.harvard.edu/v1/search/query?q="
